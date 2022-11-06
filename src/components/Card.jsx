@@ -5,13 +5,11 @@ export const Card = (props) => {
     <div className='fourC__cards-card'>
       <h3 className='fourC__cards-card_title'>{props.title}</h3>
       <p className='fourC__cards-card_desc'>{props.description}</p>
-      <div className='fourC__cards-card_contImg'>
-        <img
-          className='fourC__cards-card_img'
-          src={props.icon}
-          alt={props.altIcon}
-        />
-      </div>
+      <img
+        className='fourC__cards-card_img'
+        src={props.icon}
+        alt={props.altIcon}
+      />
     </div>
   )
 }

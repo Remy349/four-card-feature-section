@@ -1,5 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+//### Primary
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+//### Neutral
+$Very-Dark-Blue: hsl(234, 12%, 34%);
+$Grayish-Blue: hsl(229, 6%, 66%);
+$Very-Light-Gray: hsl(0, 0%, 98%);
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background-color: $Very-Light-Gray;
+}
+
+.fourC {
+  overflow-x: hidden;
+  padding: 4rem 2rem;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 5rem;
+
+    &-title {
+      font-weight: 200;
+      font-size: 1.5rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: $Very-Dark-Blue;
+
+      & span {
+        font-weight: 600;
+      }
+    }
+
+    &-desc {
+      font-size: .938rem;
+      color: $Grayish-Blue;
+      line-height: 1.6;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    row-gap: 1.5rem;
+    place-content: center;
+
+    &-card {
+      box-shadow: 0 4px 20px rgba(0,0,0,.2);
+      border-radius: .5rem;
+      background-color: #fff;
+      max-width: 21.875rem;
+      min-height: 13.5rem;
+      position: relative;
+      padding: 1.5rem;
+
+      &:first-child {
+        border-top: .3rem solid $Cyan;
+      }
+
+      &:nth-child(2) {
+        border-top: .3rem solid $Red;
+      }
+
+      &:nth-child(3) {
+        border-top: .3rem solid $Orange;
+      }
+
+      &:last-child {
+        border-top: .3rem solid $Blue;
+      }
+
+      &_title {
+        color: $Very-Dark-Blue;
+        font-size: 1.3rem;
+        margin-bottom: .3rem;
+      }
+
+      &_desc {
+        font-size: .938rem;
+        font-weight: 200;
+        color: $Grayish-Blue;
+      }
+
+      &_img {
+        position: absolute;
+        left: 72%;
+        top: 60%;
+      }
+    }
+  }
+}
+

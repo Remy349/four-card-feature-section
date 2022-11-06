@@ -15,7 +15,7 @@ function App() {
           <br />
           <span>Powered by Technology</span>
         </h1>
-        <p className='fourC__desc'>
+        <p className='fourC__header-desc'>
           Our Artificial Intelligence powered tools use millions of project data
           points to ensure that your project is successful
         </p>
