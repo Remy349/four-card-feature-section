@@ -100,3 +100,96 @@ body {
   }
 }
 
+@media screen and (max-width: 330px) {
+  .fourC {
+    padding: 3rem 1.5rem;
+
+    &__header {
+      margin-bottom: 4rem;
+    }
+
+    &__cards {
+      &-card {
+        &_img {
+          width: 3rem;
+          left: 70%;
+          top: 68%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .fourC {
+    display: grid;
+    place-content: center;
+
+    &__header {
+      display: grid;
+      place-content: center;
+
+      &-desc {
+        max-width: 32rem;
+      }
+    }
+
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: 1.5rem;
+
+      &-card {
+        min-height: 15.625rem;
+        padding: 1.875rem;
+
+        &_img {
+          left: 65%;
+          top: 65%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .fourC {
+    &__header {
+      &-title {
+        font-size: 2rem;
+      }
+
+      &-desc {
+        font-size: 1rem;
+        max-width: 34rem;
+      }
+    }
+
+    &__cards {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "supervisor team calculator"
+                           "supervisor karma calculator";
+
+      &-card {
+        &:first-child {
+          grid-area: supervisor;
+          align-self: center;
+        }
+
+        &:nth-child(2) {
+          grid-area: team;
+        }
+
+        &:nth-child(3) {
+          grid-area: karma;
+        }
+
+        &:last-child {
+          grid-area: calculator;
+          align-self: center;
+        }
+      }
+    }
+  }
+}
+
